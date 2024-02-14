@@ -1,8 +1,8 @@
 ﻿public class DestroyBox : IDrawingCard
 {
-    public string Name => throw new System.NotImplementedException();
+    public string Name => "Дайте пройти";
 
-    public string Description => throw new System.NotImplementedException();
+    public string Description => "Уничтожь одно препятствие";
 
     public DrawingCardRate Rate => DrawingCardRate.Ordinary;
 

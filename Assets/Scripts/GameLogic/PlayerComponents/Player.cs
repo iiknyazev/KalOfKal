@@ -29,7 +29,7 @@ public class Player
         if (movePhase != 0)
         {
             movePhase--;
-            move.Move();
+            GameManager.Instance.GameField.Move(move);
         }
         else
         {

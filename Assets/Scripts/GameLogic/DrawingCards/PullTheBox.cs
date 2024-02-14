@@ -1,9 +1,7 @@
 ﻿public class PullTheBox : IDrawingCard
 {
-    public string Name => throw new System.NotImplementedException();
-
-    public string Description => throw new System.NotImplementedException();
-
+    public string Name => "Телекинез";
+    public string Description => "Притяни к себе препятствие по одной из осей движения.";
     public DrawingCardRate Rate => DrawingCardRate.Ordinary;
 
     public void Draw()

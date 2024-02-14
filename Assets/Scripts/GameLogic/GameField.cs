@@ -26,5 +26,5 @@ public class GameField
         return field;
     }
     
-    public void Move(ICharacter character) => Field = character.Move();
+    public void Move(IMove move) => Field = move.Move();
 }
