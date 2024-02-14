@@ -4,6 +4,12 @@ public class Player
 {
     public readonly string Name;
     public readonly ICharacter Character;
-    public List<ICard> Deck;
-    public IArtifact Artefact;
+    // Arm
+    // ActiveArtifact
+
+    public Player(string name, ICharacter character)
+    {
+        Name = name;
+        Character = character;
+    }
 }
