@@ -9,5 +9,5 @@ public enum DrawingCardRate
 public interface IDrawingCard : ICard
 {
     public DrawingCardRate Rate { get; }
-    void Draw();
+    IMove Draw();
 }

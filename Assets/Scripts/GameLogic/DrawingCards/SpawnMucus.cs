@@ -4,8 +4,9 @@
     public string Description => "На выбранную клетку прольётся лужа слизи.";
     public DrawingCardRate Rate => DrawingCardRate.Epic;
 
-    public void Draw()
+    public IMove Draw()
     {
-        throw new System.NotImplementedException();
+        // логика розыгрыша данной карты
+        return new DrawCardMove();
     }
 }

@@ -4,8 +4,9 @@
     public string Description => "Притяни к себе препятствие по одной из осей движения.";
     public DrawingCardRate Rate => DrawingCardRate.Ordinary;
 
-    public void Draw()
+    public IMove Draw()
     {
-        throw new System.NotImplementedException();
+        // логика розыгрыша данной карты
+        return new DrawCardMove();
     }
 }

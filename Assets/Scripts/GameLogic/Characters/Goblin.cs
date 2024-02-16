@@ -4,9 +4,10 @@
 
     public string Name => "Гоблин";
 
-    public string Description => throw new System.NotImplementedException();
-    public IFieldItem[,] Move()
+    public string Description => "Если вокруг стоит 5 коробок в начале хода, то делай 4 передвижения.";
+    public IMove Move()
     {
-        throw new System.NotImplementedException();
+        // логика персонажа
+        return new CharacterMove();
     }
 }

@@ -4,10 +4,11 @@
 
     public string Name => "Орк";
 
-    public string Description => throw new System.NotImplementedException();
+    public string Description => "Может один раз за ход перепрыгнуть ОДНО препятствие, если это возможно.";
 
-    public IFieldItem[,] Move()
+    public IMove Move()
     {
-        throw new System.NotImplementedException();
+        // логика персонажа
+        return new CharacterMove();
     }
 }

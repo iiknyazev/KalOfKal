@@ -26,7 +26,7 @@ public class Arm
         }
     }
 
-    public IDrawingCard DrawCard(int index)
+    public IMove DrawCard(int index)
     {
         if (index < 0 || index >= ArmSize)
         {
@@ -36,6 +36,6 @@ public class Arm
         var card = DrawingCards[index];
         DrawingCards[index] = null;
 
-        return card;
+        return card.Draw();
     }
 }

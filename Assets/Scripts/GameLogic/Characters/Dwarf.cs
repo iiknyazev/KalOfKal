@@ -4,10 +4,11 @@
 
     public string Name => "Гном";
 
-    public string Description => throw new System.NotImplementedException();
+    public string Description => "Может один раз за 2 хода разрушить препятствие и получить одну звезду.";
 
-    IFieldItem[,] ICharacter.Move()
+    public IMove Move()
     {
-        throw new System.NotImplementedException();
+        // логика персонажа
+        return new CharacterMove();
     }
 }

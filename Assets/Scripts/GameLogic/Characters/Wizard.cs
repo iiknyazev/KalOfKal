@@ -4,10 +4,11 @@
 
     public string Name => "Маг";
 
-    public string Description => throw new System.NotImplementedException();
+    public string Description => "Может один раз за 3 хода призвать три липкие лужи. Призвав новые лужи старые высыхают";
 
-    public IFieldItem[,] Move()
+    public IMove Move()
     {
-        throw new System.NotImplementedException();
+        // логика персонажа
+        return new CharacterMove();
     }
 }
