@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-[RequireComponent(typeof(Button))] // условие, что на объекте есть компонен Button
+[RequireComponent(typeof(Button))] // условие, что на объекте есть компонент Button
 public class FixedPressedButton : MonoBehaviour
 {
     public void FixedMethod()

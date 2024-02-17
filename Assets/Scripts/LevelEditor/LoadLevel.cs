@@ -8,8 +8,9 @@ public class LoadLevel : MonoBehaviour
 {
     public string OpenFile()
     {
+        var path = Application.dataPath + "/Levels";
         // Открываем диалоговое окно выбора файла
-        string[] paths = StandaloneFileBrowser.OpenFilePanel("Open File", "", "", false);
+        string[] paths = StandaloneFileBrowser.OpenFilePanel("Open File", path, "", false);
 
         // Проверяем, был ли выбран файл
         if (paths != null && paths.Length > 0)

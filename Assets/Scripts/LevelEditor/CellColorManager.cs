@@ -4,22 +4,14 @@ using UnityEngine;
 
 public class CellColorManager : MonoBehaviour
 {
-    [SerializeField]
-    private SpriteRenderer currentCellSprite;
-    [SerializeField]
-    private SpriteRenderer obstacleCellSprite;
-    [SerializeField]
-    private SpriteRenderer emptyCellSprite;
-    [SerializeField]
-    private SpriteRenderer starCellSprite;
-    [SerializeField]
-    private SpriteRenderer pistonCellSprite;
-    [SerializeField]
-    private SpriteRenderer dynamiteCellSprite;
-    [SerializeField]
-    private SpriteRenderer portalGateCellSprite;
-    [SerializeField]
-    private SpriteRenderer mucusCellSprite;
+    [SerializeField] private SpriteRenderer currentCellSprite;
+    [SerializeField] private SpriteRenderer obstacleCellSprite;
+    [SerializeField] private SpriteRenderer emptyCellSprite;
+    [SerializeField] private SpriteRenderer starCellSprite;
+    [SerializeField] private SpriteRenderer pistonCellSprite;
+    [SerializeField] private SpriteRenderer dynamiteCellSprite;
+    [SerializeField] private SpriteRenderer portalGateCellSprite;
+    [SerializeField] private SpriteRenderer mucusCellSprite;
 
     public static Color ObstacleColor { get; private set; }
     public static Color EmptyColor { get; private set; }

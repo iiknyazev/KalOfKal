@@ -3,12 +3,9 @@ using UnityEngine;
 
 public class GridManager : MonoBehaviour
 {
-    [SerializeField]
-    private float xShift, yShift, cellSize;
-    [SerializeField]
-    private GameObject cellPrefab;
-    [SerializeField]
-    private int size;
+    [SerializeField] private float xShift, yShift, cellSize;
+    [SerializeField] private GameObject cellPrefab;
+    [SerializeField] private int size;
 
     public static GameObject[,] Grid { get; private set; }
 
