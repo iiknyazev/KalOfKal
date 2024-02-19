@@ -2,8 +2,8 @@
 
 public class TestScript : MonoBehaviour
 {
-    public void Start()
+    private void Update()
     {
-        
+        Debug.Log(Input.inputString);
     }
 }
