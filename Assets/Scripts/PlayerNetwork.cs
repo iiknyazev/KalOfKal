@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Unity.Collections;
 using Unity.Netcode;
 using UnityEngine;
@@ -6,7 +7,14 @@ public class PlayerNetwork : NetworkBehaviour
 {
     [SerializeField] private float moveSpeed;
     [SerializeField] private Transform spawnedObj;
-    private Transform transformSpawnObj;
+    //private Transform transformSpawnObj;
+    private List<Transform> transformsSpawnedObj;
+
+    private void Start()
+    {
+        transformsSpawnedObj = new List<Transform>();
+    }
+
     private struct MyCustomData : INetworkSerializable
     {
         public int intValue;
@@ -59,15 +67,25 @@ public class PlayerNetwork : NetworkBehaviour
         }
         if (Input.GetKeyUp(KeyCode.R) && IsServer)
         {
-            transformSpawnObj = Instantiate(
-                spawnedObj, 
-                new Vector3(Random.Range(0, 8), 
-                Random.Range(-5, 5), 0), Quaternion.identity);
-            transformSpawnObj.GetComponent<NetworkObject>().Spawn(true);
+            //var transformSpawnObj = Instantiate(
+            //    spawnedObj,
+            //    new Vector3(Random.Range(0, 8),
+            //    Random.Range(-5, 5), 0), Quaternion.identity);
+            //transformSpawnObj.GetComponent<NetworkObject>().Spawn(true);
+
+            //transformsSpawnedObj.Add(transformSpawnObj);
+            transformsSpawnedObj.Add(Instantiate(
+                spawnedObj,
+                new Vector3(Random.Range(0, 8),
+                Random.Range(-5, 5), 0), Quaternion.identity));
+            transformsSpawnedObj[transformsSpawnedObj.Count - 1].GetComponent<NetworkObject>().Spawn(true);
         }
         if (Input.GetKeyUp(KeyCode.T) && IsServer)
         {
-            Destroy(transformSpawnObj.gameObject);
+            var randomObjIndex = Random.Range(0, transformsSpawnedObj.Count);
+            var obj = transformsSpawnedObj[randomObjIndex].gameObject;
+            Destroy(obj);
+            transformsSpawnedObj.RemoveAt(randomObjIndex);
         }
 
         Vector3 moveDir = Vector3.zero;
