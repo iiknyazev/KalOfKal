@@ -642,7 +642,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 30, y: -130}
+  m_AnchoredPosition: {x: -251.25, y: -130}
   m_SizeDelta: {x: 220, y: 36}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &598678952
@@ -922,7 +922,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 30, y: -30}
+  m_AnchoredPosition: {x: -251.25, y: -30}
   m_SizeDelta: {x: 220, y: 36}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1162444327
@@ -1178,7 +1178,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 30, y: -80}
+  m_AnchoredPosition: {x: -251.25, y: -80}
   m_SizeDelta: {x: 220, y: 36}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1225349024
@@ -1321,7 +1321,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 105, y: -180}
+  m_AnchoredPosition: {x: 71.25, y: -22.500015}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1505892962
@@ -1460,7 +1460,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.31488073, g: 0.41622165, b: 0.5754717, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -2310,6 +2310,7 @@ MonoBehaviour:
   client: {fileID: 598678952}
   host: {fileID: 1225349024}
   toMainMenu: {fileID: 542468843}
+  playerNetwork: {fileID: 6259788171172920046, guid: b66cea82850a4f24ea66a71dacf1b09b, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

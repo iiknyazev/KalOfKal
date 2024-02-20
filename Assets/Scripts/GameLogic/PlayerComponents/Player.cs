@@ -29,7 +29,7 @@ public class Player
         if (movePhase != 0)
         {
             movePhase--;
-            GameManager.Instance.GameField.Move(move);
+            GameManager.Instance.Field.Move(move);
         }
         else
         {
@@ -39,7 +39,7 @@ public class Player
         }
     }
 
-    public List<IArtifact> SetShopFront() 
+    public List<IArtifact> SetShopFront()
         => Shop.Instance.GenerateArtifacts(artifactsInShop);
 
     public IArtifact BuyArtifact(int index)

@@ -40,7 +40,7 @@ public class LoadLevel : MonoBehaviour
         }
     }
 
-    private T Deserialization<T>(string path, T value, JsonConverter converter)
+    public T Deserialization<T>(string path, T value, JsonConverter converter)
     {
         using (StreamReader streamReader = new StreamReader(path))
         {

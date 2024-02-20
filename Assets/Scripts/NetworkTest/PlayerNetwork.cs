@@ -7,7 +7,6 @@ public class PlayerNetwork : NetworkBehaviour
 {
     [SerializeField] private float moveSpeed;
     [SerializeField] private Transform spawnedObj;
-    //private Transform transformSpawnObj;
     private List<Transform> transformsSpawnedObj;
 
     private void Start()
@@ -28,7 +27,6 @@ public class PlayerNetwork : NetworkBehaviour
             serializer.SerializeValue(ref message);
         }
     }
-
 
     private NetworkVariable<MyCustomData> netValue = new NetworkVariable<MyCustomData>(
         new MyCustomData
@@ -67,13 +65,6 @@ public class PlayerNetwork : NetworkBehaviour
         }
         if (Input.GetKeyUp(KeyCode.R) && IsServer)
         {
-            //var transformSpawnObj = Instantiate(
-            //    spawnedObj,
-            //    new Vector3(Random.Range(0, 8),
-            //    Random.Range(-5, 5), 0), Quaternion.identity);
-            //transformSpawnObj.GetComponent<NetworkObject>().Spawn(true);
-
-            //transformsSpawnedObj.Add(transformSpawnObj);
             transformsSpawnedObj.Add(Instantiate(
                 spawnedObj,
                 new Vector3(Random.Range(0, 8),
@@ -118,4 +109,6 @@ public class PlayerNetwork : NetworkBehaviour
     {
         Debug.Log("TestClientRpc " + OwnerClientId);
     }
+
+    public void Disconnect() => NetworkManager.Singleton.Shutdown(true);
 }

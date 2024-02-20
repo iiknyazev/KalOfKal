@@ -19,7 +19,14 @@ public class TestRelay : MonoBehaviour
             Debug.Log("Signed in " + AuthenticationService.Instance.PlayerId);
         };
 
-        await AuthenticationService.Instance.SignInAnonymouslyAsync();
+        try
+        {
+            await AuthenticationService.Instance.SignInAnonymouslyAsync();
+        }
+        catch (AuthenticationException ex)
+        {
+            Debug.Log("Welcome back, STALKER");
+        }
     }
 
     [Command]

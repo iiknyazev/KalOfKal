@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/NetworkTest.unity
     guid: f5c5ec0b0c764a140b0fde63cdf5408c
+  - enabled: 1
+    path: Assets/Scenes/PVPArena.unity
+    guid: dcb00f3dc79b86f4e9d15ad4df04c6f6
   m_configObjects: {}
